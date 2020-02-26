@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>airline form</title>
 </head>
 <body>
+
+<form method="post" action="https://request-inspector.glitch.me/">
+    <label name="rt_or_one_way"> Round Trip <input type="radio" value="round trip" name="rt_or_one_way">
+    </label>
+   <label name="rt_or_one_way">One way</label>
+    <input type="radio" value="one way" name="rt_or_one_way">
+
+    <label name="redeem_miles?">
+        <input type="checkbox" name="redeem_miles?" value="Yes">Redeem miles
+    </label>
+
+    <br>
+
+    <label for="flying from">From </label>
+    <input id="flying from" type="text" name="flying from" placeholder="City or airport">
+
+
+    <label for="flying to"> To </label>
+    <input id="flying to" type="text" name="flying to" placeholder="City or airport">
+
+
+    <label for="passenger_qty"> Number of passengers</label>
+    <select name="passenger_qty">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="none" selected>my answer is not here</option>
+    </select>
+
+    <br>
+
+    <label name="depart_date"> Depart <input type="date" name="depart_date"> </label>
+
+    <label name="return_date"> Return <input type="date" name="return_date"> </label>
+
+    <button type="submit">Search</button>
+</form>
+
 
 </body>
 </html>
