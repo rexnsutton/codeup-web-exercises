@@ -7,50 +7,56 @@
 <body>
 
 <form method="POST" action="https://request-inspector.glitch.me/">
-    <label for="email">
-        Email: <input id="email" type="text" placeholder="Your email here">
-    </label>
-    <button type="submit">Submit</button><br>
+    <label for="email"> Email </label>
+    <input name="email" type="text" placeholder="Your email here" id="email">
+    <button type="submit">Register</button>
+
+    <br>
 
 
-
-    <label for="password">
-        Password: <input id="password" type="password" placeholder="Password Here">
-    </label>
+    <label for="password">Password: </label>
+    <input id="password" type="password"  name="id" placeholder="Password Here">
     <button type="submit">Submit</button>
 
 
-<br>
+    <br>
 
 
-    <label for="bio">
-    Your Bio: <textarea name="bio" id="bio"></textarea>
-    </label>
+    <label for="bio">Your Bio:</label>
+    <textarea name="bio" id="bio" cols="40" rows="10"></textarea>
+
+    <br>
+
     <button type="submit">Submit</button>
 
 
-<br>
+    <br>
 
-<h2>How did you hear about us?</h2><br>
-    <label for="billboard">Billboard</label><input type="radio" id="billboard" name="response 1" value="Billboard"><br>
-    <label for="radio advertisement">Radio Ad</label> <input type="radio" id="radio advertisement" name="response 2" value="radio advertisement"><br>
-    <label for="internet advertisement">Internet Ad</label><input type="radio" id="internet advertisement" name="response 3" value="internet advertisement"><br>
-    <label for="other">Other</label><input type="radio" name="response 4" id="other" value="other"><br>
+    <h3>How did you hear about us?</h3>
+    <label for="billboard">Billboard</label>
+    <input type="checkbox" id="billboard" name="q1" value="Billboard"><br>
+    <label for="radio advertisement">Radio Ad</label>
+    <input type="checkbox" id="radio advertisement" name="q1" value="radio advertisement"><br>
+    <label for="internet advertisement">Internet Ad</label>
+    <input type="checkbox" id="internet advertisement" name="q1" value="internet advertisement"><br>
+    <label for="other">Other</label>
+    <input type="checkbox" id="other" name="q1" value="other"><br>
     <button type="submit">Submit</button>
 
 
-<br>
+    <br>
 
 
-    <label for="which_browser">What Web browser are you using? <select name="which_browser" id="which_browser">
-    </label>
+    <label for="which_browser">What web browser are you using?</label>
+    <select name="which_browser" id="which_browser">
         <option value="chrome">Chrome</option>
         <option value="firefox">Firefox</option>
         <option value="safari">Safari</option>
-    </select>
+    </select><br>
+    <button type="submit">Submit</button>
+
 
 </form>
-
 
 
 </body>
