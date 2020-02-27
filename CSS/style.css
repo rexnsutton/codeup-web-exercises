@@ -1,19 +1,18 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    color: black; /* single line comment */
     text-decoration: underline;
     text-align: center;
+    font-style: italic;
     }
 
 h1, h2 {
-    color: blue;
+    color: black;
     text-decoration: underline;
+    text-align: center;
 }
 
 body {
-    background-color: chartreuse;
-    background-image: url("https://cdn2-www.dogtime.com/assets/uploads/2018/10/puppies-cover.jpg");
-    background-repeat: no-repeat;
-    background-size: 40em 40em;
+    background-image: url("https://storage.needpix.com/rsynced_images/orange-fabric-background.jpg");
 }
 
 ul {
@@ -23,9 +22,25 @@ ul {
 body {
     font-family: "Courier New", Monospace;
 }
-
-table, tr, td {
-padding-left: 50px;
+}
+#our-products {
+    font-size: 5em;
+    padding-right: 300px;
 
 }
+
+table {
+    font-size: 4em;
+}
+
+a:hover{
+    color: coral;
+    background-color: blue;
+}
+
+
+
+
+
+
 
