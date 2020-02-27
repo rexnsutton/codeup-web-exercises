@@ -1,4 +1,31 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
     }
+
+h1, h2 {
+    color: blue;
+    text-decoration: underline;
+}
+
+body {
+    background-color: chartreuse;
+    background-image: url("https://cdn2-www.dogtime.com/assets/uploads/2018/10/puppies-cover.jpg");
+    background-repeat: no-repeat;
+    background-size: 40em 40em;
+}
+
+ul {
+    list-style: square;
+}
+
+body {
+    font-family: "Courier New", Monospace;
+}
+
+table, tr, td {
+padding-left: 50px;
+
+}
+
