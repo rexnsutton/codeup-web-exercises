@@ -3,6 +3,7 @@
     text-decoration: underline;
     text-align: center;
     font-style: italic;
+    font-size: 3em;
     }
 
 h1, h2 {
@@ -20,23 +21,36 @@ ul {
 }
 
 body {
-    font-family: "Courier New", Monospace;
+    font-family: "Lacquer" ;
 }
-}
+
 #our-products {
-    font-size: 5em;
-    padding-right: 300px;
-
+    font-size: 1em;
 }
 
-table {
-    font-size: 4em;
+#our-product-id {
+    text-align: left;
+}
+
+ tr > td {
+    font-size: 1em;
+    border: 1px solid black;
+     padding-left: 65px;
+     padding: 20px
 }
 
 a:hover{
     color: coral;
     background-color: blue;
 }
+
+.intro {
+    text-align: center;
+}
+
+
+
+
 
 
 
