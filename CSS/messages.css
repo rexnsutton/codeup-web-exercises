@@ -4,41 +4,38 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
-    font-size: 15px;
+
+}
+
+.message {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px solid #D8DBDF;
+    border-radius: 5px;
+
 }
 
 .message-info {
     color: #4B46A2;
-    border: 1px solid #D8DBDF;
     background-color: #CDDEFF;
-    margin: 8px;
-    padding: 8px;
-    border-radius: 4px;
+
 }
 
 .message-success {
     color: #398656;
-    border: 2px solid #D8DBDF;
     background-color: #CFF3DA;
-    margin: 8px;
-    padding: 8px;
-    border-radius: 4px;
+
 }
 
 .message-warning {
     color: #A0903B;
-    border: 2px solid #D8DBDF;
     background-color: #FCFBC8;
-    margin: 8px;
-    padding: 8px;
-    border-radius: 4px;
+
 }
 
 .message-error {
     color: #983A4F;
-    border: 2px solid #D8DBDF;
     background-color: #FAD3D7;
-    margin: 8px;
-    padding: 8px;
-    border-radius: 4px;
+
 }
