@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+}
+
+
+
+.box1 {
+padding: 3em 10em;
+    width: 100%;
+}
+
+h2 h3 {
+    display: inline-block;
+}
