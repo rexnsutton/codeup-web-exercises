@@ -2,13 +2,52 @@
     margin: 0;
 }
 
+ul .appleMusic-nav {
+    float: left;
+    padding: 1em 0 0 6em;
+    list-style: none;
+    width: 10%;
 
-
-.box1 {
-padding: 3em 10em;
-    width: 100%;
 }
 
-h2 h3 {
+h1 {
+    width: 40%;
+    float: left;
+    padding: 0;
+}
+
+li a {
+    color: #c2c2c2;
+    text-decoration: none;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+}
+
+
+.main-nav-bar {
+    background-color: #333;
+}
+
+
+.main-nav {
     display: inline-block;
+    padding: 13px 49px 13px 49px;
 }
+
+.tryFree {
+    border: 1px solid #ff2f56;
+}
+
+
+
+
+
+#overview {
+
+}
+
+
+
+
+
+
