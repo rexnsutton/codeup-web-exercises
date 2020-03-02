@@ -26,6 +26,11 @@ a {
     color: var(--link-color);
 }
 
+.profile-items {
+    list-style: none;
+    padding: 0;
+}
+
 .profile-image {
     position: absolute;
    top: 235px;
@@ -33,6 +38,10 @@ a {
 
 .profile-form {
     line-height: 80px;
+}
+
+.profile-entry {
+    margin: .5em;
 }
 
 .top-nav {
@@ -91,6 +100,7 @@ a {
     float: left;
     margin: 0 .5em;
     width: calc(25% - 1em);
+    padding-right: .5px
 
 
 }
@@ -103,15 +113,23 @@ a {
 
 }
 
+.media-body {
+    float: left;
+    width: calc(100% - 50px);
+
+}
+
+.media-image {
+    width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+
 .who-to-follow {
     position: relative;
     float: right;
     margin: 0 .5em;
     width: calc(25% - 1em);
-
-}
-.container {
-    padding: 2em;
 }
 
 .media {
@@ -119,5 +137,6 @@ a {
     border-bottom: 1px solid #DDD;
     background-color: white;
     padding: .5em;
+    overflow: auto;
 
 }
