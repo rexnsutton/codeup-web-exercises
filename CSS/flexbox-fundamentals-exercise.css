@@ -7,7 +7,9 @@ body {
     font-family: Chalkboard, sans-serif;
 }
 
-h1 {text-align: center;}
+h1 {
+    text-align: center;
+}
 
 h2, h3 {
     padding: 0;
@@ -35,7 +37,7 @@ h2, h3 {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     /* enter needed declarations here */
 }
 
@@ -131,6 +133,7 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     flex-wrap: wrap;
+    align-content: space-around;
     justify-content: space-between;
     align-items: center;
     /* enter needed declarations here */
