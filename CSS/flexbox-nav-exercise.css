@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+header nav .nav-bar-logo {
+    font-family: 'montserrat', sans-serif;
+    font-size: 2em;
+    padding: .2em 0;
+}
+
+header nav a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header nav a:hover {
+    color: blue;
+}
+
+header nav .nav-left {
+    justify-content: flex-start;
+    font-size: 12px;
+}
+
+header nav .nav-right {
+    justify-content: flex-end;
+    font-size: 12px;
+}
