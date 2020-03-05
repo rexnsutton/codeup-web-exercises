@@ -121,8 +121,7 @@ nav a:hover {
     border-radius: 10px;
     position: relative;
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
-    transition-property: border-color;
-    transition-duration: .2s;
+    transition-property: border .2s;
 }
 
 .card:hover {
