@@ -13,11 +13,11 @@
         font-size: 10px;
     }
 
-        .wrapper {
+        .container {
             display: grid;
-            grid-gap: .5em;
-            grid-template-columns: repeat(10, 1fr);
-            grid-template-rows: repeat(10, 1fr);
+            grid-gap: .3em;
+            grid-template-columns: 20% 1fr 15%;
+            grid-template-rows: 4em 1fr 4em;
             height: 500px;
             width: 700px;
         }
@@ -26,22 +26,22 @@
             background-color: #ffd700;
         }
         #nav-box {
-            grid-area: 2 / 1 / 11 / 3;
+            grid-area: 2 / 1 / 4 / 2;
         }
 
         #header-box {
-            grid-area: 1 / 1 / 2 / 11 ;
+            grid-area: 1 / 1 / 2 / 4 ;
         }
         #article-box {
-            grid-area: 2 / 3 / 10 / 9;
+            grid-area: 2 / 2 / 3 / 3;
         }
 
         #ads-box {
-            grid-area: 2 / 9 / 10 / 11;
+            grid-area: 2 / 3 / 3 / 4;
         }
 
         #footer-box {
-            grid-area: 10 / 3 / 11 / 11;
+            grid-area: 3 / 2 / 4 / 4;
         }
 
 
@@ -49,7 +49,7 @@
     </style>
 </head>
 <body>
-<div class="wrapper">
+<div class="container">
     <div class="box" id="header-box">
         <header>
             <p>Header</p>
