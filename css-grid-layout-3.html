@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        h1 {
+            color: white;
+            font-weight: lighter;
+            padding: 6px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(16, 1fr);
+            grid-gap: .5em;
+            height: 600px;
+            width: 800px;
+        }
+
+        .box {
+            background-color: #ffd700;
+        }
+
+        #box1 {
+            grid-area: 1 / 1 / 2 / 17;
+        }
+        #box2 {
+            grid-area: 2 / 1 / 6 / 5;
+        }
+
+        #box3 {
+            grid-area: 2 / 5 / 3 / 9;
+        }
+        #box4 {
+            grid-area: 2 / 9 / 3 / 17;
+        }
+
+        #box5 {
+            grid-area: 3 / 5 / 4 / 13;
+        }
+        #box6 {
+            grid-area: 3 / 13 / 4 / 17;
+        }
+
+        #box7 {
+            grid-area: 4 / 5 / 5 / 9;
+        }
+
+        #box8 {
+            grid-area: 4 / 9 / 5 / 13;
+        }
+
+        #box9 {
+            grid-area: 4 / 13 / 5 / 17;
+        }
+        #box10 {
+            grid-area: 5 / 5 / 6 / 17;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box" id="box1"><h1>1</h1></div>
+    <div class="box" id="box2"><h1>2</h1></div>
+    <div class="box" id="box3"><h1>3</h1></div>
+    <div class="box" id="box4"><h1>4</h1></div>
+    <div class="box" id="box5"><h1>5</h1></div>
+    <div class="box" id="box6"><h1>6</h1></div>
+    <div class="box" id="box7"><h1>7</h1></div>
+    <div class="box" id="box8"><h1>8</h1></div>
+    <div class="box" id="box9"><h1>9</h1></div>
+    <div class="box" id="box10"><h1>10</h1></div>
+
+</div>
+
+</body>
+</html>

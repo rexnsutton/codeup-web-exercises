@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        p {
+            padding: 1em 0 0 1em;
+            font-size: 10px;
+        }
+
+
+        .wrapper {
+            display: grid;
+            grid-gap: .5em;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            height: 500px;
+            width: 700px;
+        }
+
+        .box {
+            background-color: #9acd33;
+        }
+        #nav-box {
+            grid-area: 2 / 1 / 10 / 3;
+        }
+
+        #header-box {
+            grid-area: 1 / 1 / 2 / 11 ;
+        }
+        #article-box {
+            grid-area: 2 / 3 / 9 / 11;
+        }
+
+        #ads-box {
+            grid-area: 9 / 3 / 10 / 11;
+        }
+
+        #footer-box {
+            grid-area: 10 / 1 / 11 / 11;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box" id="header-box">
+        <header>
+            <p>Header</p>
+        </header>
+    </div>
+    <div class="box" id="nav-box">
+        <p>Nav</p>
+    </div>
+    <div class="box" id="article-box">
+        <p>Article</p>
+    </div>
+    <div class="box" id="ads-box">
+        <p>Ads</p>
+    </div>
+    <div class="box" id="footer-box">
+        <p>Footer</p>
+    </div>
+</div>
+
+
+</body>
+</html>
