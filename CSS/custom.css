@@ -3,19 +3,18 @@ a, i {
     color: #111111;
 }
 
-
-
-
 .jumbotron {
     background-image: url("https://java.codeup.com/examples/bootstrap/pizza.png");
     background-repeat: no-repeat;
     width: 100%;
+    background-size: cover;
 
 }
 .display-4 {
     background-color: white;
     opacity: 0.7;
     text-align: center;
+    width: 100%;
 }
 .cardhead1 {
     background-color: rgb(0, 122, 254);
@@ -36,4 +35,14 @@ a, i {
     border-color: #111111;
 }
 
+div.container {
+    padding: 0;
+}
 
+#contact-tab {
+    color: blue;
+}
+
+#profile-tab {
+    color: blue;
+}
