@@ -3,6 +3,11 @@ a, i {
     color: #111111;
 }
 
+div.container {
+    padding: 0;
+}
+
+
 .jumbotron {
     background-image: url("https://java.codeup.com/examples/bootstrap/pizza.png");
     background-repeat: no-repeat;
@@ -23,7 +28,6 @@ a, i {
 .listitem1 {
     height: 3em;
     font-size: large;
-    line-height: ;
 }
 
 /*.btn-primary {
@@ -33,10 +37,6 @@ a, i {
 .btn-outline-success {
     color: #111111;
     border-color: #111111;
-}
-
-div.container {
-    padding: 0;
 }
 
 #contact-tab {
