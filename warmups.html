@@ -108,8 +108,21 @@
     function getRandomNumber()  {
        return Math.floor(Math.random() * 11);
     }
-
     console.log(getRandomNumber());
+
+    //Exercise 16 Create an Array with your classmates name in it.
+
+    var myMates = ['Rex', 'Sarah', 'Ron', 'Ry', 'Emily', 'Evelyn', 'Nayoung', 'Tyler', 'Esai', 'Jacob', 'Ramon', 'Delayne', 'Val', 'Moriah', 'Roshan', 'Sung'];
+
+    console.log("ClassmatesArray", myMates);
+
+    //Exercise 17 create a function that returns a random item from an array
+
+    function getRandomItem(array){
+        return array[getRandomNumber()];
+    }
+        console.log('getRandomItem(myMates): ', getRandomItem(myMates));
+
 </script>
 </body>
 </html>
