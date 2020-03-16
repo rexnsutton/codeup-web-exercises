@@ -123,6 +123,16 @@
     }
         console.log('getRandomItem(myMates): ', getRandomItem(myMates));
 
+    //Exercise 18 Create a function that prints a list of names randomly from the apex array
+    //TODO: Make sure that there are no duplicate names.
+    function generateMicrowaveList() {
+
+    //main problem to solve: only 1 item at a time
+        for (var x = 0; x < myMates.length; x++){
+            console.log('Index: ' + x + ' ' + getRandomItem(myMates));
+        }
+    }
+    generateMicrowaveList();
 </script>
 </body>
 </html>
