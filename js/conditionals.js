@@ -38,20 +38,25 @@
 // }
 // yourNumber();
 
+
+
+// confirm('Do you want to enter a number?');2/ /,m
+// var enterNumber = prompt('Enter your number: ');
+//     enterNumber = parseInt(enterNumber);
 // if (enterNumber % 2 === 0) {
-// //     alert( 'this number is even')
-// // } else if (enterNumber % 2 === 1){
-// //     alert('this number is odd')
-// //
-// // }
-// //
-// // alert (enterNumber + 100);
-// //
-// // if (enterNumber < 0){
-// //     alert('this number is negative')
-// // } else if (enterNumber > 0){
-// //     alert('this number is positive')
-// // }
+//     alert( 'this number is even')
+// } else if (enterNumber % 2 === 1){
+//     alert('this number is odd')
+//
+// }
+//
+// alert ('your number + 100 = ' + (enterNumber + 100));
+//
+// if (enterNumber < 0){
+//     alert('this number is negative')
+// } else if (enterNumber > 0){
+//     alert('this number is positive')
+// }
 
 
 
@@ -80,8 +85,8 @@
  * console.logging the function's return value
  */
 
-
-
+//
+// //
 // function analyzeColor (colorName){
 //
 //     if (colorName === 'blue') {
@@ -102,8 +107,8 @@
 // // Don't change the next two lines!
 // // These lines create two variables for you:
 // // - `colors`: a list of the colors of the rainbow
-// // - `randomColor`: contains a single random color value from the list (this
-// //                  will contain a different color every time the page loads)
+// // // - `randomColor`: contains a single random color value from the list (this
+// // //                  will contain a different color every time the page loads)
 // var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 // var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
@@ -114,26 +119,26 @@
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-// analyzeColor(randomColor);
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-
+//
 // var colorName = prompt('what color?');
 // switch (colorName){
 //     case 'blue':
-//         alert('blue is the color of the sky');
+//         console.log('blue is the color of the sky');
 //         break;
 //     case 'red':
-//         alert('strawberries are red');
+//         console.log('strawberries are red');
 //         break;
 //     case 'cyan':
-//         alert('I know nothing about cyan');
+//         console.log('I know nothing about cyan');
 //         break;
 //     default:
-//         alert('Unidentified color');
+//         console.log('Unknown color');
 //         break;
 // }
 
