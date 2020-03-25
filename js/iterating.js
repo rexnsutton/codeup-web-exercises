@@ -28,7 +28,7 @@
      * array.
      */
 for (var i = 0; i < names.length; i++){
-    console.log(names[i]);
+    console.log('for loop ' + names[i]);
 }
     /**
      * TODO:
