@@ -28,6 +28,8 @@ for(var i = 1; i <= 9; i++){
     console.log(String(i).repeat(i));
 }
 
+
+
 for (var a = 100; a > 4; a -= 5){
     console.log(a);
 }
