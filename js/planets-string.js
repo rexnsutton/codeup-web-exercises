@@ -24,7 +24,9 @@
      * string, and <li> tags around each planet.
      */
     var planetWBreak = planetsArray.join('<br>');
-    console.log(planetWBreak);
+    document.write(planetWBreak);
+
+
     planetsArray.unshift(' <ul> ');
     planetsArray.push('</ul>');
     var bonus = planetsArray.join(' <li> ');
