@@ -20,7 +20,8 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
     center: [-96.8057, 32.7787],
-    zoom: 18
+    zoom: 15,
+
 });
 
 
@@ -41,14 +42,17 @@ var map = new mapboxgl.Map({
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-96.8084, 32.7799]. This marker will mark the Sixth Floor Muesume on our map.
 // TODO TOGETHER: Change the color of the marker
 var markerOptions = {
-    color: 'red'
+    color: 'red',
+    draggable: true
 };
 var marker = new mapboxgl.Marker(markerOptions)
     .setLngLat([-96.8057, 32.7787])
     .addTo(map);
 
 
-
+var markerMuseum = new mapboxgl.Marker(markerOptions)
+    .setLngLat([-96.8084, 32.7799])
+    .addTo(map);
 
 
 // TODO: Experiment with the color, and setting the LngLat
@@ -64,9 +68,16 @@ var marker = new mapboxgl.Marker(markerOptions)
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
+var popup = new mapboxgl.Popup()
+    .setHTML("<h1>Codeup Rocks!!!</h1>")
+    .addTo(map);
+marker.setPopup(popup);
 
+var popupMuseum = new mapboxgl.Popup()
+    .setHTML("<h1>Sixth Floor Museum</h1>")
+    .addTo(map);
 
-
+markerMuseum.setPopup(popupMuseum);
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the Sixth Floor Musume marker.
 
 
