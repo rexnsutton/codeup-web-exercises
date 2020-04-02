@@ -78,6 +78,7 @@ var popupMuseum = new mapboxgl.Popup()
     .addTo(map);
 
 markerMuseum.setPopup(popupMuseum);
+
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the Sixth Floor Musume marker.
 
 
