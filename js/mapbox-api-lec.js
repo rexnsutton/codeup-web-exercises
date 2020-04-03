@@ -3,7 +3,7 @@
  *********************************************/
 // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
 
-console.log('token: ' + mapboxtoken);
+// console.log('token: ' + mapboxtoken);
 
 /**********************************************
  * 			CUSTOMIZING THE MAP
@@ -15,16 +15,16 @@ console.log('token: ' + mapboxtoken);
 // Zoom levels range from 0 up to 24, with 0 being a global view and 24 being the most detailed at street level (the max zoom level depends on the location).
 
 //TODO TOGETHER: Set map to Dallas area using the coordinates [-96.8057, 32.7787]
-mapboxgl.accessToken = mapboxtoken;
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-96.8057, 32.7787],
-    zoom: 15,
-
-});
-
-
+// mapboxgl.accessToken = mapboxtoken;
+// var map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v9',
+//     center: [-96.8057, 32.7787],
+//     zoom: 15,
+//
+// });
+//
+//
 
 
 
@@ -41,18 +41,18 @@ var map = new mapboxgl.Map({
 
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-96.8084, 32.7799]. This marker will mark the Sixth Floor Muesume on our map.
 // TODO TOGETHER: Change the color of the marker
-var markerOptions = {
-    color: 'red',
-    draggable: true
-};
-var marker = new mapboxgl.Marker(markerOptions)
-    .setLngLat([-96.8057, 32.7787])
-    .addTo(map);
+// var markerOptions = {
+//     color: 'red',
+//     draggable: true
+// };
+// var marker = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-96.8057, 32.7787])
+//     .addTo(map);
 
 
-var markerMuseum = new mapboxgl.Marker(markerOptions)
-    .setLngLat([-96.8084, 32.7799])
-    .addTo(map);
+// var markerMuseum = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-96.8084, 32.7799])
+//     .addTo(map);
 
 
 // TODO: Experiment with the color, and setting the LngLat
@@ -68,16 +68,16 @@ var markerMuseum = new mapboxgl.Marker(markerOptions)
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
-var popup = new mapboxgl.Popup()
-    .setHTML("<h1>Codeup Rocks!!!</h1>")
-    .addTo(map);
-marker.setPopup(popup);
-
-var popupMuseum = new mapboxgl.Popup()
-    .setHTML("<h1>Sixth Floor Museum</h1>")
-    .addTo(map);
-
-markerMuseum.setPopup(popupMuseum);
+// var popup = new mapboxgl.Popup()
+//     .setHTML("<h1>Codeup Rocks!!!</h1>")
+//     .addTo(map);
+// marker.setPopup(popup);
+//
+// var popupMuseum = new mapboxgl.Popup()
+//     .setHTML("<h1>Sixth Floor Museum</h1>")
+//     .addTo(map);
+//
+// markerMuseum.setPopup(popupMuseum);
 
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the Sixth Floor Musume marker.
 
