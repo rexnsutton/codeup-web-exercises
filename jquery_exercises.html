@@ -23,14 +23,29 @@
 <script>
 "use strict";
 
-   $(document).ready(function () {
-       $('li').css('font-size', '20px');
-        $('p, li, h1').css('background-color', '#FFFF00');
-        alert($('h1').html());
-   })
+   // $(document).ready(function () {
+   //     $('li').css('font-size', '20px');
+   //      $('p, li, h1').css('background-color', '#FFFF00');
+   //      alert($('h1').html());
+   // })
+   //
 
+    $('h1').click(function(){
+        $(this).css('background-color', 'red');
+    });
 
+    $('p').dblclick(function(){
+        $(this).css('font-size', '18px');
+    });
 
+    var handlerIn = function(){
+        $('li').css('color', 'red');
+    };
+    var handlerOut = function () {
+        $('li').css('color', 'black');
+    };
+
+    $('li').hover(handlerIn, handlerOut);
 
 </script>
 </body>
