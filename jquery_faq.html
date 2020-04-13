@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery faq</title>
+    <style>
+
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .visible {
+            visibility: visible;
+            font-weight: bolder;
+        }
+
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<h1>FAQs about National Parks</h1>
+
+<dl>
+    <dt class="question">How Many National Parks are in America?</dt>
+    <dd class="invisible">Today, there are 58 national parks in the United States.</dd>
+
+    <dt class="question">What state has most national parks?</dt>
+    <dd class="invisible">California</dd>
+
+    <dt class="question">Which is the smallest national park in the US?</dt>
+    <dd class="invisible">Hot Springs National Park, Arkansas</dd>
+
+    <dt class="question">What is the oldest National park in the US?</dt>
+    <dd class="invisible">Yellowstone National Park</dd>
+
+    <dt class="question">What President created the most national parks?</dt>
+    <dd class="invisible">President Theodore Roosevelt</dd>
+
+    <dt class="question">What is the newest national park?</dt>
+    <dd class="invisible">On the shores of Lake Michigan is the newest national park in the U.S., the Indiana Dunes, authorized by Congress as a national lakeshore in 1966 and upgraded to national park status on Feb. 15, 2019.</dd>
+
+    <dt class="question">What is the most visited national park?</dt>
+    <dd class="invisible">Great Smoky Mountains National Park is the nation's most popular national park.</dd>
+
+    <dt class="question">What is the only state that does not have a national park?</dt>
+    <dd class="invisible">Delaware</dd>
+
+    <dt class="question">Which National Park makes the most money?</dt>
+    <dd class="invisible">Acadia National Park, 3.5 million.</dd>
+
+    <dt class="question">How do national parks get funded?</dt>
+    <dd class="invisible">Congress Has Been Treating Our National Parks and Waters Funding Like a Piggy Bank for Decades. ... Established by Congress 54 years ago, the fund takes revenues from the royalties earned by offshore oil and gas operations and uses them to pay for the preservation and upkeep of public lands and waters in all 50 states.</dd>
+
+</dl>
+
+<button id="show-answers">Show Answers</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+    $(document).ready(function() {
+        $('#show-answers').click(function() {
+            $('dd').toggleClass('visible');
+        });
+        var $highlight = $('.question');
+
+        $('dt').click(function() {
+        $highlight.addClass('highlight');
+        });
+
+    });
+
+
+
+
+</script>
+</body>
+</html>
