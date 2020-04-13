@@ -63,16 +63,16 @@
         alert("NOOOOO!!!! YOU FOUND ALL MY SECRETS!!!!! ");
         alert("BRACE YOURSELF!!!!");
 
-        document.body.style.backgroundImage = "url('imgs/hula-girl.jpg')";
+        document.body.style.backgroundImage = "url('imgs/dancing.gif')";
         var audio = new Audio('imgs/bensound-ukulele.mp3');
         audio.play();
         var blink = document.getElementById('header');
         setInterval(function() {
-            blink.style.color = 'blue';
+            blink.style.color = 'red';
             blink.style.textAlign = 'center';
             blink.style.fontSize = '150px';
-            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-        }, 1000);
+            blink.style.opacity = (blink.style.opacity == 0 ? 2 : 0);
+        }, 500);
 
 
     }
