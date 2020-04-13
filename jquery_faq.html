@@ -62,13 +62,14 @@
 <script>
 
     $(document).ready(function() {
-        $('#show-answers').click(function() {
+        $('#show-answers').click(function(event) {
+            event.preventDefault();
             $('dd').toggleClass('visible');
         });
         var $highlight = $('.question');
 
         $('dt').click(function() {
-        $highlight.addClass('highlight');
+        $highlight.toggleClass('highlight');
         });
 
     });
