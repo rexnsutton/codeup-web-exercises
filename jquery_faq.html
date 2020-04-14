@@ -53,23 +53,77 @@
 
     <dt class="question">How do national parks get funded?</dt>
     <dd class="invisible">Congress Has Been Treating Our National Parks and Waters Funding Like a Piggy Bank for Decades. ... Established by Congress 54 years ago, the fund takes revenues from the royalties earned by offshore oil and gas operations and uses them to pay for the preservation and upkeep of public lands and waters in all 50 states.</dd>
-
 </dl>
-
 <button id="show-answers">Show Answers</button>
+<hr>
+
+<ul class="national-parks-ul">
+    <h3>Yosemite National Park</h3>
+    <li>Yosemite’s granite rock formations glow like fire at sunset.</li>
+    <li>The park’s diverse landscape supports more than 400 species.</li>
+    <li>Yosemite is home to one of the tallest waterfalls in the world.</li>
+    <li class="last-li">Yosemite is the only national park to bid to host the winter Olympics.</li>
+</ul>
+
+<ul class="national-parks-ul">
+    <h3>YellowStone National Park</h3>
+    <li>Yellowstone National Park was established on March 1, 1872.</li>
+    <li>Yellowstone is the world’s first national park.</li>
+    <li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode Island and Delaware combined</li>
+    <li class="last-li">Yellowstone is home to more than 500 active geysers (more than half the world's geysers)</li>
+</ul>
+
+<ul class="national-parks-ul">
+    <h3>Zion National Park</h3>
+    <li>The park was established on November 19, 1919</li>
+    <li>It covers an area of 593 square kilometers (229 square miles).</li>
+    <li>The lowest elevation is 1,117 meters (3,666 feet)</li>
+    <li class="last-li">There is a subway in Zion</li>
+</ul>
+<button id="list-change">Highlight last li</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 
     $(document).ready(function() {
-        $('#show-answers').click(function() {
+        $('#show-answers').click(function(event) {
+            event.preventDefault();
             $('dd').toggleClass('visible');
         });
         var $highlight = $('.question');
 
         $('dt').click(function() {
-        $highlight.addClass('highlight');
+        $highlight.toggleClass('highlight');
         });
+
+
+
+       // $('#list-change').click(function () {
+       //     $('.last-li').addClass('highlight')
+       // });
+        $('#list-change').click(function () {
+            $('ul li:last-child').css('background-color', 'yellow')
+            });
+
+        $('h3').click(function () {
+        $(this).parent().css('font-weight', 'bold')
+        });
+
+        $('li').click(function () {
+           var parentEl = $(this).parent();
+           var lastvar = parentEl.children();
+
+           lastvar.each(function (index) {
+               if (index === 1){
+                   $(this).css('color', 'blue')
+               }
+           });
+
+
+            });
+
+
+
 
     });
 
