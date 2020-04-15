@@ -27,8 +27,9 @@
     </style>
 </head>
 <body>
+<h2 class="register">Would you like to register for our site?</h2>
+
 <div class="newsletter">
-    <h2 class="register">Would you like to register for our site?</h2>
     <h1>Would you like to sign up for our newsletter?</h1>
     <span class="hide-newsletter">X</span>
 </div>
@@ -111,8 +112,6 @@
         $highlight.toggleClass('highlight');
         });
 
-
-
         $('#list-change').click(function () {
             $('ul').each(function () {
                 $(this).children().last().toggleClass('highlight')
@@ -125,7 +124,6 @@
             $(this).next().toggleClass('bold').slideToggle(3000);
 
         });
-
 
         $('li').click(function () {
             var parentEl = $(this).parent();
@@ -147,13 +145,6 @@
         setTimeout(function(){
             $('.register').fadeIn(4000);
         }, 8000);
-
-
-
-
-
-
-
 
 
     });
