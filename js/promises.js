@@ -1,7 +1,23 @@
-const url = "https://api.github.com/users/rexnsutton/events/public";
-const myPromise = fetch(url, {headers: {'Authorization': GITHUB_KEY}})
-                  .then(response => console.log(response.json()));
 
+function getUserLastCommit(username) {
+    let url = `https://api.github.com/users/${username}/events/public`;
+
+    return fetch(url, {headers: {'Authorization': `token ${GITHUB_KEY}`}})
+        .then(response => response.json()
+            .then( data => data[0].created_at));
+}
+
+getUserLastCommit('rexnsutton').then (lastCommitDate => console.log("lastCommitDate ", lastCommitDate));
+
+const wait = miliseconds => {
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+            resolved(miliseconds);
+        }, miliseconds);
+    });
+};
+
+wait(4000).then((ms) => console.log(`you\'ll see this after one ${ms/1000} second`));
 
 
 
