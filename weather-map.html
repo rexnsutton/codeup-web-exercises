@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet'/>
+    <style>
+    </style>
+</head>
+<body>
+<nav class="nav justify-content-between bg-primary text-white mb-3">
+    <h2 class="nav-item">Weather App</h2>
+    <a class="nav-item align-self-center" id="current-city"></a>
+</nav>
+
+<form class="form-inline" >
+    <span>Place</span>
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="input-search" class="sr-only"></label>
+        <input type="text" class="form-control" id="input-search" value="Dallas" placeholder="Enter City">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" id="submit-weather">Find</button>
+</form>
+<div class="card-deck">
+    <div class="card">
+        <div class="card-header d-flex justify-content-center" id="first-day">
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-center" id="first-temp"></li>
+            <li class="list-group-item" id="first-description"></li>
+            <li class="list-group-item" id="first-humidity">Humidity:</li>
+            <li class="list-group-item" id="first-wind"></li>
+            <li class="list-group-item" id="first-pressure"></li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="card-header d-flex justify-content-center" id="second-day">
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-center" id="second-temp"></li>
+            <li class="list-group-item" id="second-description"></li>
+            <li class="list-group-item" id="second-humidity"></li>
+            <li class="list-group-item" id="second-wind"></li>
+            <li class="list-group-item" id="second-pressure"></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-header d-flex justify-content-center" id="third-day">
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-center" id="third-temp"></li>
+            <li class="list-group-item" id="third-description"></li>
+            <li class="list-group-item" id="third-humidity"></li>
+            <li class="list-group-item" id="third-wind"></li>
+            <li class="list-group-item" id="third-pressure"></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-header d-flex justify-content-center" id="fourth-day">
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-center" id="fourth-temp"></li>
+            <li class="list-group-item" id="fourth-description"></li>
+            <li class="list-group-item" id="fourth-humidity"></li>
+            <li class="list-group-item" id="fourth-wind"></li>
+            <li class="list-group-item" id="fourth-pressure"></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-header d-flex justify-content-center" id="fifth-day">
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-center" id="fifth-temp"></li>
+            <li class="list-group-item" id="fifth-description"></li>
+            <li class="list-group-item" id="fifth-humidity"></li>
+            <li class="list-group-item" id="fifth-wind"></li>
+            <li class="list-group-item" id="fifth-pressure"></li>
+        </ul>
+    </div>
+</div>
+<div class="mt-3" id='map' style='width: 100vw; height: 600px;'></div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+
+
+    (function() {
+        var url = "http://api.openweathermap.org/data/2.5/forecast";
+
+        getInfo();
+
+        function getInfo(){
+
+
+            $.get(url, {
+                "APPID": OWM_KEY,
+                "q" : $("#input-search").val(),
+                "units": "imperial"
+            }).done(function (data){
+                console.log(data);
+                $("#current-city").text("Current city: " + data.city.name);
+                for (var i = 0; i < data.list.length; i++) {
+                    if (i === 0) {
+                        var date = data.list[i].dt_txt;
+                        var splitDate = date.split(" ");
+
+                        $("#first-day").text(splitDate[0]);
+                        $("#first-temp").text(data.list[0].main.temp_max + "°F / " + data.list[0].main.temp_min + "°F");
+                        $("#first-description").text("Description: " + data.list[0].weather[0].description);
+                        $("#first-humidity").text("Humidity: " +data.list[0].main.humidity + "%").css("font-weight", "bold");
+                        $("#first-wind").text("Wind: " + data.list[0].wind.speed);
+                        $("#first-pressure").text("Pressure: " + data.list[0].main.pressure);
+                    } else if(i === 8){
+                        var dateSecond = data.list[i].dt_txt;
+                        var splitDateSecond = dateSecond.split(" ");
+
+
+                        $("#second-day").text(splitDateSecond[0]);
+                        $("#second-temp").text(data.list[8].main.temp_max + "°F / " + data.list[8].main.temp_min + "°F");
+                        $("#second-description").text("Description: " + data.list[8].weather[0].description);
+                        $("#second-humidity").text("Humidity: " +data.list[8].main.humidity + "%");
+                        $("#second-wind").text("Wind: " + data.list[8].wind.speed);
+                        $("#second-pressure").text("Pressure: " + data.list[8].main.pressure);
+                    }else if (i === 16){
+                        var dateThird = data.list[i].dt_txt;
+                        var splitThird = dateThird.split(" ");
+
+                        $("#third-day").text(splitThird[0]);
+                        $('#third-temp').text(data.list[16].main.temp_max + "°F / " + data.list[16].main.temp_min + "°F");
+                        $("#third-description").text("Description: " + data.list[16].weather[0].description);
+                        $("#third-humidity").text("Humidity: " +data.list[16].main.humidity + "%");
+                        $("#third-wind").text("Wind: " + data.list[16].wind.speed);
+                        $("#third-pressure").text("Pressure: " + data.list[16].main.pressure);
+                    }else if(i === 24){
+                        var dateFourth = data.list[i].dt_txt;
+                        var splitFourth = dateFourth.split(" ");
+                        $("#fourth-day").text(splitFourth[0]);
+                        $('#fourth-temp').text(data.list[24].main.temp_max + "°F / " + data.list[24].main.temp_min + "°F");
+                        $("#fourth-description").text("Description: " + data.list[24].weather[0].description);
+                        $("#fourth-humidity").text("Humidity: " +data.list[24].main.humidity + "%");
+                        $("#fourth-wind").text("Wind: " + data.list[24].wind.speed);
+                        $("#fourth-pressure").text("Pressure: " + data.list[24].main.pressure);
+
+
+                    } else if(i === 32){
+                        var dateFifth = data.list[i].dt_txt;
+                        var splitFifth = dateFifth.split(" ");
+                        $("#fifth-day").text(splitFifth[0]);
+                        $('#fifth-temp').text(data.list[32].main.temp_max + "°F / " + data.list[32].main.temp_min + "°F");
+                        $("#fifth-description").text("Description: " + data.list[32].weather[0].description);
+                        $("#fifth-humidity").text("Humidity: " +data.list[32].main.humidity + "%");
+                        $("#fifth-wind").text("Wind: " + data.list[32].wind.speed);
+                        $("#fifth-pressure").text("Pressure: " + data.list[32].main.pressure);
+
+                    }
+                }
+                geocode('Dallas', mapboxtoken).then(function (result) {
+                    console.log(result);
+                    mapboxgl.accessToken = mapboxtoken;
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/streets-v9',
+                        zoom: 9,
+                        center: ([data.city.coord.lon, data.city.coord.lat])
+                    });
+
+                    var markerOptions = {
+                        color: 'blue',
+                        draggable: true
+                    };
+                    var marker = new mapboxgl.Marker(markerOptions)
+                        .setLngLat([data.city.coord.lon, data.city.coord.lat])
+                        .addTo(map);
+
+
+                    map.on('click', function() {
+                        var popup = new mapboxgl.Popup()
+                            .setHTML("<h1>"+ data.city.name +"</h1>")
+                            .addTo(map);
+                        marker.setPopup(popup);
+                    });
+
+                });
+            });
+        }
+        $("#submit-weather").click(function (e) {
+            e.preventDefault();
+            getInfo();
+        });
+
+    })();
+</script>
+</body>
+</html>
