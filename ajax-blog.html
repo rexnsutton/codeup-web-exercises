@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="posts"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+    $.get("data/blog .json").done(function (data) {
+    console.log("loaded");
+        console.log(data[2].content);
+
+    });
+
+
+</script>
+</body>
+</html>
