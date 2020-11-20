@@ -11,9 +11,9 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    return ('hello, ' + name + '!');
+console.log("Hello" + " " + name);
+
 }
-console.log(sayHello('JAck'));
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -21,23 +21,17 @@ console.log(sayHello('JAck'));
  *
  * console.log 'helloMessage' to check your work
  */
-var helloMessage = sayHello("john");
-console.log(helloMessage);
+sayHello('Rex');
 
-helloMessage = (sayHello( 'jeff'));
-console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = 'rob';
-console.log('var my name = ', sayHello(myName));
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+var myName = "Rex ";
 
+sayHello(myName);
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
@@ -55,11 +49,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(aNumber){
-    return 2 === aNumber;
+function isTwo (aNumber){
+    return aNumber === 2;
 }
 
-console.log('random = ', random, isTwo(random));
 console.log(isTwo(2));
 console.log(isTwo(3));
 /**
@@ -73,22 +66,22 @@ console.log(isTwo(3));
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(tip, total){
-    return tip * total;
+function calculateTip(tipPercentage, billTotal){
+    billTotal = prompt("Enter bill total: ");
+    tipPercentage = prompt("Enter a percentage to tip: ");
+
+    var totalTip = tipPercentage * billTotal;
+    console.log(totalTip);
+    alert(totalTip);
 }
-console.log('calculateTip .20 20', calculateTip(0.20, 20));
-console.log('calculateTip .25 25.50', calculateTip(0.25, 25.50));
-console.log('calculateTip .3 100', calculateTip(0.30, 100));
+calculateTip();
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-var bill = prompt('Give me the total');
-var percentage = prompt('Give me the percentage');
-var tipTotal = calculateTip(percentage, bill);
-alert(tipTotal);
+
 
 
 
@@ -106,8 +99,3 @@ alert(tipTotal);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount(price, discountPercentage){
-    return price - (discountPercentage * price);
-
-}
-console.log(applyDiscount(45.99, 0.12));
