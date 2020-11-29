@@ -107,7 +107,15 @@
             event.preventDefault();
             $('dd').toggleClass('visible');
         });
+        var $highlight = $('.question');
+
+        $('dt').click(function() {
+            $highlight.toggleClass('highlight');
+        });
+
     });
+
+
 
 
 
